@@ -24,8 +24,8 @@ class bb_show {
     else
       $object = $params["extra"][0];
     
-    if (!in_array($object, []) {
-      printf("\n",);
+    if (!in_array($object, array("stack"))) {
+      printf("fatal: ambiguous argument '%s': unknown object type.\n", $object);
       return 1;
     }
     
@@ -36,16 +36,26 @@ class bb_show {
       return 1;
     }
     
-    if (($stack = file($path)) === FALSE) {
+    if (($stack = file($path, FILE_IGNORE_NEW_LINES)) === FALSE) {
       printf("%s: Cannot write file\n", $path);
       return 1;
     }
     
+    if (count($stack) == 0) {
+      printf("freetime.\n");
+      return 0;
+    }
+    
     $stack = array_reverse($stack);
+    $max = 0;
+    foreach ($stack as $item)
+      if (strlen($item) > $max)
+        $max = strlen($item);
     
     foreach ($stack as $item) {
-      printf("%s", $item);
+      printf("| %-${max}s |\n", $item);
     }
+    printf("%s\n", str_pad("", $max+4, "+"));
     
     return 0;
   }
