@@ -136,7 +136,8 @@ function pop(index) {
   index = index || 1
   index = db.length - index
   if (index >= 0) {
-    db.splice(index, 1)
+    item = db.splice(index, 1)
+    archive(item[0])
     dump()
   }
   print()
@@ -161,6 +162,12 @@ function print() {
     c++
   }
   console.log(("+-" + "-".repeat(max) + "-+").grey)
+}
+
+function archive(item) {
+  var fo = fs.createWriteStream("archive.db", {"flags": "a"})
+  fo.write(JSON.stringify({"date": Date(), "text": item}) + "\n")
+  fo.end()
 }
 
 function dump() {
