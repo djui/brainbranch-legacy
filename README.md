@@ -29,12 +29,27 @@ Thanks to [ASCII-Art](http://www.ascii-art.de/ascii/pqr/pinky+brain.txt) for the
 
 ## Usage
     $ ./bb.js
+    freetime!
     bb> help
      mind ITEM, +ITEM        Push ITEM onto stack
      drop [INDEX], -[INDEX]  Pop an item with INDEX from stack
      help                    Show this help screen
      exit                    Exit the program
+    bb> mind Checkout papers
+    
+    | Checkout papers | 1
+    +-----------------+
+    bb> +Extend Readme
+    
+    | Extend Readme   | 1
+    | Checkout papers | 2
+    +-----------------+
+    bb> drop
+    
+    | Checkout papers | 1
+    +-----------------+
     bb> exit
+    quitting...
     $ 
 
 ## Requirements
