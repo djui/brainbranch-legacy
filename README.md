@@ -19,9 +19,9 @@ When you are done, you can either pop from the top or even from within.
 But remember that you cannot push within the stack, as this would mess up 
 natural time.
 
-Persistent storage at the moment is done using a simple text file as I do not 
-expect big data structures or fast I/O handling. This keeps the project small 
-and dependency-less.
+Persistent storage at the moment is done using a simple text file to dump
+an array as JSON. I do not expect big data structures or fast I/O handling. 
+This keeps the project small and dependency-less.
 
 ## Credits
 Thanks to [Ryan Dahl](git://github.com/ry) for [NodeJS](http://nodejs.org/).
