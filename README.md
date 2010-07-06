@@ -1,7 +1,7 @@
 # BrainBranch
 
 ## Description
-Helps to remember your work tasks by not letting get lost in the recursion 
+Helps to remember your work tasks by not getting lost in the recursion 
 maze.
 
 Right now, it is just some kind of a todo list.
