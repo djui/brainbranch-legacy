@@ -168,10 +168,10 @@ function dump() {
 }
 
 function print_help() {
-  console.log(" mind ITEM, +ITEM       Push ITEM onto stack.")
-  console.log(" drop [INDEX], -[INDEX] Pop an item with INDEX from stack.")
-  console.log(" help                   Show this help screen.")
-  console.log(" exit                   Exit the program.")
+  console.log(" mind ITEM, +ITEM        Push ITEM onto stack")
+  console.log(" drop [INDEX], -[INDEX]  Pop an item with INDEX from stack")
+  console.log(" help                    Show this help screen")
+  console.log(" exit                    Exit the program")
 }
 
 function starting() {
@@ -219,7 +219,7 @@ console.log("              l       j             .'/ - \\`.              ")
 console.log("             .j.  .   <            (.'    .\\ \\f`. |\\,'   ")
 console.log("            ,' `.  \\ / \\           `|      \\,'||-:j      ")
 console.log("          .'  .'\\   Y.  \\___......__\\ ._   /`.||         ")
-console.log("  __.._,-\" .-\"'\"\")  /' ,' _          \\ |  /\"-.`j\"\"``---.._ ")
+console.log("  __.._,-\" .-\"'\"\")  /' ,' _          \\ |  /\"-.`j\"\"``---.._")
 console.log("    .'_.-'\"     / .(\"-'-\"\":\\        ._)|_(__. \"'      ")
 console.log("   ;.'         /-'---\"\".--\"'       /,_,^-._ .)           ")
 console.log("   `:\\=.__      `---._.;'           \"\"      \"\"         ")
