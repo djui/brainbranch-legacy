@@ -182,6 +182,8 @@ function print_help() {
 }
 
 function starting() {
+  console.log("\033]0;BrainBranch\007")
+  
   path.exists("bb.db", function(exists) {
     if (exists) {
       var stats = fs.statSync("bb.db")
