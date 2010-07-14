@@ -4,7 +4,7 @@ var sys = require("sys")
 var fs = require("fs")
 var path = require("path")
 var colors = require("./vendor/colors.js/colors")
-var nStore = require('nstore')
+var nStore = require("./vendor/nstore/lib/nstore")
 
 var stdin = process.openStdin()
 var stdout = process.stdout
