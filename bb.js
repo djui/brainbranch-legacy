@@ -3,8 +3,8 @@
 var sys = require("sys")
 var fs = require("fs")
 var path = require("path")
-var colors = require("./vendor/colors.js/colors");
-
+var colors = require("./vendor/colors.js/colors")
+var nStore = require('nstore')
 
 var stdin = process.openStdin()
 var stdout = process.stdout
@@ -200,6 +200,7 @@ function finishing() {
   process.exit(0)
 }
 
+// var db = nStore("bb.db")
 var db = []
 starting()
 
